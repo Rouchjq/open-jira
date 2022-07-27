@@ -1,0 +1,7 @@
+.dragging {
+  background-color: rgb(240, 240, 240, 0.5);
+  border: 1px dashed rgb(240, 240, 240);
+  border-radius: 10px;
+  /* box-shadow: 0 0 5px #ccc; */
+  cursor: move;
+}

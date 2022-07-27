@@ -1,36 +1,37 @@
 import type { NextPage } from 'next';
 import { Card, CardContent, CardHeader, Grid, Typography } from '@mui/material';
 import { Layout } from '../components/layouts';
-import { EntryList } from '../components/ui';
+import { EntryList, NewEntry } from '../components/ui';
 
 const HomePage: NextPage = () => {
   return (
-    <Layout title="Home-OpenJira">
+    <Layout title='Home-OpenJira'>
       <Grid container spacing={5}>
         <Grid item xs={12} sm={4}>
           <Card sx={{ height: 'calc(100vh - 100px)' }}>
-            <CardHeader title="Pendientes" />
+            <CardHeader title='Pendientes' />
             <CardContent>
+              <NewEntry />
               {/* Listado de las entradas*/}
-              <EntryList status="pending" />
+              <EntryList status='pending' />
             </CardContent>
           </Card>
         </Grid>
         <Grid item xs={12} sm={4}>
           <Card sx={{ height: 'calc(100vh - 100px)' }}>
-            <CardHeader title="En Progreso" />
+            <CardHeader title='En Progreso' />
             <CardContent>
               {/* Listado de las entradas*/}
-              <EntryList status=" in-progress" />
+              <EntryList status=' in-progress' />
             </CardContent>
           </Card>
         </Grid>
         <Grid item xs={12} sm={4}>
           <Card sx={{ height: 'calc(100vh - 100px)' }}>
-            <CardHeader title="Completadas" />
+            <CardHeader title='Completadas' />
             <CardContent>
               {/* Listado de las entradas*/}
-              <EntryList status="finished" />
+              <EntryList status='finished' />
             </CardContent>
           </Card>
         </Grid>
@@ -40,4 +41,3 @@ const HomePage: NextPage = () => {
 };
 
 export default HomePage;
-
